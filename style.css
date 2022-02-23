@@ -128,7 +128,8 @@ html {
 /* Sección Servicios */
 #services {
     padding: 80px 20px 60px 20px;
-    background-color: rgb(34, 207, 184);
+    /* background-color: rgb(34, 207, 184); */
+    background-image: linear-gradient(160deg, rgb(34, 207, 184),rgb(25, 191, 206));
     text-align: center;
 }
 
@@ -278,6 +279,7 @@ html {
 #about {
     padding: 80px 20px 90px 20px;
     background-color: rgb(34, 207, 184);
+    background-image: linear-gradient(160deg, rgb(34, 207, 184),rgb(25, 191, 206));
 }
 
 /* Sección Sobre mí: Titular */
@@ -542,6 +544,7 @@ form div {
     height: 400px;
     object-fit: cover;
     border-radius: 15px;
+    transition: 400ms;
 }
 
 .individual_project a {
@@ -553,6 +556,10 @@ form div {
     font-weight: 400;
     margin-top: 10px;
     color: black;
+}
+
+.individual_project img:hover {
+    transform: scale(1.05);
 }
 
 
@@ -600,6 +607,14 @@ form div {
     height: 450px;
     object-fit: cover;
     border-radius: 10px;
+    border: 2px solid rgba(219, 219, 219, 0);
+    transition: 300ms;
+}
+
+.galeria img:hover {
+    border-radius: 15px;
+    border: 2px solid rgb(219, 219, 219);
+    transform: scale(1.02);
 }
 
 .frame {
