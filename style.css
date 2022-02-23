@@ -1,0 +1,811 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Encabezado */
+
+.encabezado {
+    padding: 10px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    width: auto;
+} 
+
+/* Barra de navegación */
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    width: 50%;
+    text-decoration: none;
+}
+
+.logo p {
+    color: rgb(190, 246, 250);
+    width: 50%;
+    padding-left: 3%;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logo img {
+    height: 35px;
+}
+
+/* Barra de navegación: Menú horizontal */
+
+
+.main-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.main-menu li {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+}
+
+.main-menu li a {
+    display: block;
+    margin: auto;
+    padding: 10px 30px;
+    color:white;
+    text-decoration: none;
+    
+    
+}
+
+.main-menu li a:hover {
+    color: rgb(172, 172, 172);
+    transition: all .3s;
+}
+
+
+/* Barra de navegación: Submenúeas (vertical) */
+
+.submenu {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.main-menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s;
+}
+
+
+
+/* PÁGINA: Index */
+
+/* Portada */
+
+.portada {
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.portada img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Servicios */
+
+/* Sección Servicios */
+#services {
+    padding: 80px 20px 60px 20px;
+    background-color: rgb(34, 207, 184);
+    text-align: center;
+}
+
+/* Sección Servicios: Títular */
+
+#services h2 {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+}
+
+/* Alineación de elementos Cards */
+
+#content-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    gap: 25px;
+    margin: 40px 0px;
+    justify-content: center;
+}
+
+/* #content-cards {
+    display: flex;
+    justify-content: space-evenly;
+} */
+
+/* Sección Servicios: Cards */
+
+.card-services {
+    padding: 45px;
+    text-align: center;
+}
+
+.card-services h3 {
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+}
+
+.card-services p {
+    color: white;
+    margin-top: 15px;
+}
+
+/* Sección Servicios: Imagen */
+
+#services img {
+    width: 200px;
+}
+
+/* Proyectos */
+
+/* Sección Proyectos */
+#works {
+    padding: 80px 20px 60px 20px;
+    text-align: center;
+}
+
+/* Sección Proyectos: Títular */
+
+#works h2 {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 500px));
+    gap: 25px;
+    margin: 40px 0px;
+    justify-content: center;
+}
+
+
+/* Sección Proyectos: Cards */
+
+.card-works {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    text-align: center;
+}
+
+.card-works a {
+    color: black;
+    text-decoration: none;
+}
+
+.card-works img {
+    width: 450px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-works h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.card-works p {
+    margin-top: 15px;
+}
+
+/* Sección Proyectos: Botón a Todos los proyectos */
+
+.button-works {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.button-works button {
+    padding: 15px 60px 15px 60px;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 400ms;
+}
+
+.button-works a { 
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    transition: 400ms;
+}
+
+.button-works button:hover {
+    background-color: rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
+.button-works a:hover {
+    color: white;
+}
+
+/* Sección Sobre mí */
+#about {
+    padding: 80px 20px 90px 20px;
+    background-color: rgb(34, 207, 184);
+}
+
+/* Sección Sobre mí: Titular */
+
+#about h2 {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 60px;
+    color: rgb(255, 255, 255);
+}
+
+/* Sección Sobre mí: Card */
+
+.cards-about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 500px));
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Sección Sobre mí: Imagen CV */
+
+
+.cards-about img {
+    width: 500px;
+    border-radius: 15px;
+}
+
+
+/* Sección Sobre mí: Descripción Card */
+
+.texto-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.cards-about h3 {
+    padding: 10px 0px;
+    font-size: 30px;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+}
+
+.texto-about h3 span {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+/* Sección Sobre mí: Texto Card */
+
+.cards-about p {
+    text-align: justify;
+    color: white;
+}
+
+/* Sección Sobre mí: Botón a Currículum */
+
+.button-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.button-about button {
+    padding: 15px 40px 15px 40px;
+    border-width: 1.5px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 400ms;
+}
+
+.button-about a { 
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 400ms;
+}
+
+.button-about button:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+.button-about a:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+/* Sección Contacto */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px 90px 0px;
+    width: 100%;
+    
+}
+
+/* Sección Contacto: Titular */
+
+#contact h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+/* Sección Contacto: Bajada */
+
+.bajada-contact p {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+/* Sección Contacto: Formulario */
+
+form {
+    margin-top: 20px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Sección Contacto: Etiquetas y casillas */
+
+.label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.casilla {
+    margin-bottom: 20px;
+    padding: 10px 0px 10px 15px;
+    border-width: 1px;
+    border-radius: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+}
+
+/* Sección Contacto: Casilla mensajes */
+
+.mensaje {
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px 0px 10px 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+}
+
+/* Sección Contacto: Botón Enviar */
+
+.button-contact {
+    display: flex;
+    justify-content: center;
+}
+
+
+.button-contact .enviar {
+    margin: auto;
+    margin-top: 50px;
+    padding: 15px 80px 15px 80px;
+    border-width: 1.5px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 400ms;
+}
+
+.button-contact .enviar { 
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 400ms;
+}
+
+.button-contact .enviar:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+/* Pie de página */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    padding: 30px 40px;
+}
+
+.legales {
+    color: white;
+}
+
+.social-media {
+    color: white;
+}
+
+.social-media a img {
+    margin: 0px 10px 10px 0px;
+    width: 20px;
+    height: 20px;
+}
+
+.footer-mail {
+    width: 20px;
+    margin-right: 8px;
+}
+
+/* PÁGINA: Proyectos */
+
+/* Titular Todos los Proyectos */
+
+.title-projects {
+    margin: 40px 0px;
+}
+
+.title-projects h2 {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+/* Grilla de Proyectos */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 500px));
+    gap: 25px;
+    margin: 40px 0px;
+    justify-content: center;
+}
+
+/* Estilo de las Cards de Proyectos */
+
+.individual_project {
+    display: flex;
+    justify-content: center;
+}
+
+.individual_project img {
+    width: 450px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.individual_project a {
+    text-decoration: none;
+}
+
+.individual_project p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: black;
+}
+
+
+/* PÁGINA: Galería dentro de Proyecto */
+
+/* Título */
+
+.title {
+    margin: 40px 0px;
+}
+
+.title h3 {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+/* Descripción */
+
+.descripcion {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0px 0px 40px 0px;
+}
+
+
+/* Grilla de Proyectos */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 500px));
+    gap: 15px;
+    margin: 40px 0px;
+    justify-content: center;
+}
+
+/* Estilo de las Cards de Proyectos */
+
+.galeria img {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.frame {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.frame iframe {
+    width: 88%;
+    height: 550px;
+    border-radius: 10px;
+}
+
+/* PÁGINA: Currículum */
+
+/* Título - mismos atributos que title-projects */
+
+/* CV */
+
+.content-cv {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+
+/* Cuerpo de CV */
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.title_cat {
+    margin-bottom: 10px;
+}
+
+.title_cat h2 {
+    font-weight: 350;
+    font-size: 30px;
+}
+
+.rubro {
+    margin: 10px 30px 20px;
+}
+
+.rubro h3 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.rubro p {
+    font-weight: 350;
+    font-size: 17px;
+}
+
+.rubro ul li {
+    margin-left: 25px;
+    list-style: none;
+}
+
+.herramientas img {
+    margin: 5px;
+    width: 40px;
+}
+
+
+/* Estilo responsive */
+
+@media (max-width: 800px) {
+    /* PÁGINA: Index */
+
+    /* Formulario de Contacto */
+
+    .formulario {
+        max-width: 500px;
+    }
+
+    /* Bajada de Contacto */
+
+    .bajada-contact {
+        max-width: 500px;
+    }
+
+    .bajada-contact {
+        padding-left: 0px;
+    }
+
+    /* Botón de Contacto */
+
+    .button-contact input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 200px;
+        margin-right: 20%;
+    }
+
+    /* Sobre mí */
+
+    .cards-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0% 15%;
+    }
+
+    /* Imagen de Galería de cada proyecto */
+
+    .galeria img {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* Pie de página */
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .legales {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+
+    .legales p {
+        text-align: center;
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+    
+
+
+@media (max-width: 400px) {
+    /* PÁGINA: Index */
+
+    /* Sobre mí */
+
+    .cards-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5%;
+    }
+
+    /* Formulario de Contacto */
+
+    .formulario {
+        max-width: 290px;
+    }
+
+    /* Bajada de Contacto */
+
+    .bajada-contact {
+        max-width: 290px;
+    }
+
+    .bajada-contact {
+        padding-left: 0px;
+    }
+
+    /* Botón de Contacto */
+
+    .button-contact input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 200px;
+        margin-right: 20%;
+    }
+
+    /* Proyectos recientes */
+
+    .card-works {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .card-works img {
+        height: 90%;
+    }
+
+}
+
