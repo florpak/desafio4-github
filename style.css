@@ -217,6 +217,11 @@ html {
     flex-direction: column;
     margin: 40px;
     text-align: center;
+    transition: 400ms;
+}
+
+.card-works:hover {
+    transform: scale(1.04);
 }
 
 .card-works a {
